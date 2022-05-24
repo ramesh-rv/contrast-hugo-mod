@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/{{ if .Site.Params.minimal }}minimal.css{{ else }}index.css{{ end }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="{{ .Permalink }}">
+
+
+<title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+<header>
+  {{ if not (gt (len .Site.Menus) 1) }}
+    <a href="{{ .Site.BaseURL }}" class="title">{{ .Site.Title }}</a>
+  {{ end }}
+  {{ range $menu, $items := .Site.Menus }}
+    <nav>
+    {{ range $items }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+    </nav>
+  {{ end }}
+</header>
+
+
+<section>
+  <h1>Tag: {{ .Title }}</h1>
+  <ul>
+    {{ range .Pages }}
+      <li>
+        <h3>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h3>
+        <time>{{ .Date.Format (.Site.Params.dateform | default "January 2006") }}</time>
+      </li>
+    {{ end }}
+  </ul>
+</section>

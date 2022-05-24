@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/{{ if .Site.Params.minimal }}minimal.css{{ else }}index.css{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<header>
+    {{ if not (gt (len .Site.Menus) 1) }}
+      <a href="{{ .Site.BaseURL }}" class="title">{{ .Site.Title }}</a>
+    {{ end }}
+    {{ range $menu, $items := .Site.Menus }}
+      <nav>
+      {{ range $items }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+      </nav>
+    {{ end }}
+  </header>
+
+<section>
+  <h2>Tags</h2>
+  <ul>
+    {{ range .Data.Terms.Alphabetical }}
+      <li>
+        <h3>
+          <a href="{{ .Page.Permalink }}">({{ .Count }}) {{ .Page.Title }}</a>
+        </h3>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+
