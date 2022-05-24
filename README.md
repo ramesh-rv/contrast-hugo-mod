@@ -1,3 +1,15 @@
+## About 
+
+This theme is a fork of [contrast-hugo](https://github.com/niklasbuschmann/contrast-hugo)
+
+### Changes in this fork
+
+* Added Tags
+* Link to Github and Twitter on Menu
+
+
+-----
+
 Adaption of the of [contrast](https://github.com/niklasbuschmann/contrast) Jekyll theme.
 
 ## Installation
