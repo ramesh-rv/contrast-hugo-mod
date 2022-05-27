@@ -5,7 +5,7 @@ This theme is a fork of [contrast-hugo](https://github.com/niklasbuschmann/contr
 ### Changes in this fork
 
 * Added Tags
-* Link to Github and Twitter on Menu
+* Link to Github and LinkedIn on Menu
 
 
 -----
