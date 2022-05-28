@@ -8,6 +8,9 @@ This theme is a fork of [contrast-hugo](https://github.com/niklasbuschmann/contr
 * Link to Github and LinkedIn on Menu
 
 
+Updates in [wiki](https://github.com/ramesh-rv/contrast-hugo-mod/wiki)
+
+
 -----
 
 Adaption of the of [contrast](https://github.com/niklasbuschmann/contrast) Jekyll theme.
